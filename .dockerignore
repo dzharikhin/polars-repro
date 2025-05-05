@@ -1,0 +1,9 @@
+.idea/
+data/
+genre/
+.gitignore
+Dockerfile
+*.iml
+*.zip
+*.ods
+*.tar
