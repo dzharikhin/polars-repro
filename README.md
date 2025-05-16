@@ -11,12 +11,11 @@ docker buildx use multiarch
 ```
 Run build on amd64:
 ```shell
-export REPRO_VERSION=1.0.0
-docker buildx bake --progress=plain 2>&1 | tee bake.log
+docker buildx bake repro[or rust_repro]--progress=plain 2>&1 | tee bake.log
 ```
 > `Dockerfile`s can contain lots of not needed stuff - the repro is sourced from more complex project with more dependencies
 
 Then you can save image to tar to import on the device
 ```shell
-docker save "repro:${REPRO_VERSION}-armv7-32k" > "repro_${REPRO_VERSION}-armv7-32k".tar
+docker save "repro:<version>" > "repro_<version>.tar"
 ```
